@@ -13,5 +13,18 @@ module.exports = {
       'react/lib/ExecutionEnvironment': true,
       'react/lib/ReactContext': true
     }
+  },
+
+  karma: {
+    reporters: ['clear-screen'],
+    mochaReporter: {
+      output: 'minimal',
+      symbols: {
+        success: '•',
+        info: 'ℹ',
+        warning: '⚠',
+        error: '⨯'
+      }
+    }
   }
 }

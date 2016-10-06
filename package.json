@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "enzyme": "2.4.1",
+    "karma-clear-screen-reporter": "^1.0.0",
     "react-addons-test-utils": "15.3.2",
     "sagui": "6.6.1"
   }
