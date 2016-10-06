@@ -22,6 +22,8 @@
     "react-dom": "15.3.2"
   },
   "devDependencies": {
+    "enzyme": "2.4.1",
+    "react-addons-test-utils": "15.3.2",
     "sagui": "6.6.1"
   }
 }
