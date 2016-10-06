@@ -1,7 +1,7 @@
-import style from './index.css'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import HelloComponent from './components/HelloComponent'
 
-const div = document.createElement('div')
-div.innerHTML = '<h1>Hello World</h1>'
-div.className = style.component
+const rootElement = document.getElementById('tdd-workshop')
+ReactDOM.render(<HelloComponent />, rootElement)
 
-document.getElementById('tdd-workshop').appendChild(div)
