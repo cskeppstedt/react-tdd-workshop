@@ -5,7 +5,15 @@
 module.exports = {
   pages: ['index'],
 
+  javaScript: {
+    transpileDependencies: ['@klarna']
+  },
+
   webpack: {
+    babel: {
+      babelrc: false,
+      presets: ['sagui']
+    },
     externals: {
       // Required by enzyme http://airbnb.io/enzyme/docs/guides/webpack.html
       'cheerio': 'window',
