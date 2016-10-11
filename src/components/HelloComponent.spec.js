@@ -1,6 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import * as Title from '@klarna/ui/Title'
+import * as Paragraph from '@klarna/ui/Paragraph'
 import HelloComponentInjector from 'inject!./HelloComponent'
 
 const exampleDepStub = sinon.stub().returns('fixed output')
@@ -26,6 +27,16 @@ describe('HelloComponent', () => {
 
     const expected = 'This is from a dependency: fixed output'
     const actual = title.text()
+
+    expect(actual).toEqual(expected)
+  })
+
+  it('should render the message prop', () => {
+    const wrapper = mount(<HelloComponent message='This is a message' />)
+    const paragraph = wrapper.find(Paragraph.Primary)
+
+    const expected = 'This is a message'
+    const actual = paragraph.text()
 
     expect(actual).toEqual(expected)
   })
